@@ -1,11 +1,12 @@
 import {Component} from 'angular2/core';
 import {ROUTER_DIRECTIVES, RouteConfig} from 'angular2/router';
-import {AboutComponent} from '../../about/components/about.component';
+
 import {NameListService} from '../../shared/services/name-list.service';
 import {HeaderComponent} from "./header/header.component";
 import {FooterComponent} from "./footer/footer.component";
 import {WelcomeComponent} from "../../ngApp/welcome/welcome.component";
 import {SigninComponent} from "../../ngApp/signin/signin.component";
+import {AboutComponent} from '../../ngApp/about/about.component';
 
 @Component({
   selector: 'blp-app-main',
@@ -25,7 +26,7 @@ import {SigninComponent} from "../../ngApp/signin/signin.component";
     component: WelcomeComponent,
     useAsDefault: true
   },
-  { path: '/about',
+  { path: '/about/...',
     name: 'About',
     component: AboutComponent
   },
