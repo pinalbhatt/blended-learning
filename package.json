@@ -1,9 +1,9 @@
 {
-  "name": "angular2-seed",
-  "version": "0.0.0",
-  "description": "Seed for Angular 2 apps",
+  "name": "blended-learning",
+  "version": "0.0.1",
+  "description": "Blended Learning Pathway",
   "repository": {
-    "url": "https://github.com/mgechev/angular2-seed"
+    "url": "https://github.com/pinalbhatt/blended-learning"
   },
   "scripts": {
     "build.dev": "gulp build.dev",
@@ -29,7 +29,7 @@
     "webdriver-start": "webdriver-manager start",
     "webdriver-update": "webdriver-manager update"
   },
-  "author": "Minko Gechev <mgechev>",
+  "author": "Pinal Bhatt",
   "license": "MIT",
   "devDependencies": {
     "async": "^2.0.0-rc.2",
