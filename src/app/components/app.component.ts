@@ -1,6 +1,6 @@
 import {Component} from 'angular2/core';
 import {ROUTER_DIRECTIVES, RouteConfig} from 'angular2/router';
-
+import {HTTP_PROVIDERS} from "angular2/http";
 import {NameListService} from '../../shared/services/name-list.service';
 import {HeaderComponent} from "./header/header.component";
 import {FooterComponent} from "./footer/footer.component";
@@ -8,11 +8,14 @@ import {WelcomeComponent} from "../../ngApp/welcome/welcome.component";
 import {SigninComponent} from "../../ngApp/signin/signin.component";
 import {AboutComponent} from '../../ngApp/about/about.component';
 
+import {DemoComponent} from "../../ngApp/demo/demo.component";
+
 @Component({
   selector: 'blp-app-main',
   viewProviders: [NameListService],
   moduleId: module.id,
   templateUrl: './app.component.html',
+  providers: [HTTP_PROVIDERS],
   directives: [ROUTER_DIRECTIVES, HeaderComponent, FooterComponent]
 })
 @RouteConfig([
@@ -34,6 +37,11 @@ import {AboutComponent} from '../../ngApp/about/about.component';
     path: "/signin",
     name: "Signin",
     component: SigninComponent
+  },
+  {
+    path: "/demo/...",
+    name: "Demo",
+    component: DemoComponent
   }
 ])
 export class AppComponent {}
