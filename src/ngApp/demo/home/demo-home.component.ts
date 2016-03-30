@@ -2,6 +2,7 @@ import { Component } from 'angular2/core';
 import {ROUTER_DIRECTIVES} from "angular2/router";
 import {DemoTitleService} from "../demo-title.service";
 import {AngularFire} from "angularfire2/angularfire2";
+import { Observable } from 'rxjs/Rx';
 
 @Component({
   selector: 'demo-home-template',
