@@ -1,4 +1,11 @@
 <Div>
   Deme Home
   <a [routerLink]="['DemoYoutubePlaylist']">Youtube playlist demo</a>
+  <Div>
+    <ul *ngFor="#item of items | async">
+      <li class="text">
+        {{item[0].hint}}
+      </li>
+    </ul>
+  </Div>
 </Div>

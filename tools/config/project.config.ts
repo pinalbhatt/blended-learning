@@ -23,5 +23,9 @@ export class ProjectConfig extends SeedConfig {
       { src: `${this.ASSETS_SRC}/css/mdb.css`, inject: true },
       { src: `${this.ASSETS_SRC}/css/style.css`, inject: true }
     ];
+    (<any>this.SYSTEM_CONFIG_DEV.paths)['firebase'] =
+      `${this.APP_BASE}node_modules/firebase/lib/firebase-web`;
+    (<any>this.SYSTEM_CONFIG_DEV.paths)['angularfire2'] =
+      `${this.APP_BASE}node_modules/angularfire2/angularfire2`;
   }
 }
