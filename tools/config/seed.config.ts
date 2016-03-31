@@ -120,6 +120,7 @@ export class SeedConfig {
       [this.BOOTSTRAP_MODULE]: `${this.APP_BASE}${this.BOOTSTRAP_MODULE}`,
       'angular2/*': `${this.APP_BASE}angular2/*`,
       'rxjs/*': `${this.APP_BASE}rxjs/*`,
+      'firebase': '/node_modules/firebase/lib/firebase-web',
       '*': `${this.APP_BASE}node_modules/*`
     },
     packages: {
@@ -134,6 +135,10 @@ export class SeedConfig {
     defaultJSExtensions: true,
     paths: {
       [`${this.TMP_DIR}/*`]: `${this.TMP_DIR}/*`,
+      'rxjs/*': `node_modules/rxjs/*`,
+      'angular2/*': `node_modules/angular2/*`,
+      'firebase': 'node_modules/firebase/lib/firebase-web.js',
+      'angularfire2': `node_modules/angularfire2/angularfire2.js`,
       '*': 'node_modules/*'
     }
   };
