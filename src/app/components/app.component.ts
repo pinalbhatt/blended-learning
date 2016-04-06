@@ -1,7 +1,7 @@
 import {Component} from 'angular2/core';
 import {ROUTER_DIRECTIVES, RouteConfig} from 'angular2/router';
 import {HTTP_PROVIDERS} from "angular2/http";
-import {FIREBASE_PROVIDERS, defaultFirebase, AngularFire, firebaseAuthConfig, AuthMethods, AuthProviders} from "angularfire2/angularfire2";
+import {FIREBASE_PROVIDERS, defaultFirebase} from "angularfire2/angularfire2";
 import {NameListService} from '../../shared/services/name-list.service';
 import {HeaderComponent} from "./header/header.component";
 import {FooterComponent} from "./footer/footer.component";
@@ -15,13 +15,7 @@ import {DemoComponent} from "../../ngApp/demo/demo.component";
   viewProviders: [NameListService],
   moduleId: module.id,
   templateUrl: './app.component.html',
-  providers: [HTTP_PROVIDERS, FIREBASE_PROVIDERS, defaultFirebase('https://roken.firebaseio.com'),
-    firebaseAuthConfig({
-      provider: AuthProviders.Facebook,
-      method: AuthMethods.Popup,
-      scope: ['email']
-    })
-  ],
+  providers: [HTTP_PROVIDERS, FIREBASE_PROVIDERS, defaultFirebase('https://roken.firebaseio.com')],
   directives: [ROUTER_DIRECTIVES, HeaderComponent, FooterComponent]
 })
 @RouteConfig([

@@ -1,5 +1,5 @@
 import { Component } from 'angular2/core';
-import {AngularFire, FirebaseAuth, AuthProviders, AuthMethods} from "angularfire2/angularfire2";
+import {FirebaseAuth, AuthProviders, AuthMethods} from "angularfire2/angularfire2";
 
 @Component({
     selector: 'signin-template',
@@ -7,7 +7,7 @@ import {AngularFire, FirebaseAuth, AuthProviders, AuthMethods} from "angularfire
     templateUrl: './signin.template.html'
 })
 export class SigninComponent{
-  constructor(private  _fbAuth: FirebaseAuth, public af: AngularFire){
+  constructor(private  _fbAuth: FirebaseAuth){
 
   }
 
