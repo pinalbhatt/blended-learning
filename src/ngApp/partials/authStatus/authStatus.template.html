@@ -1,0 +1,8 @@
+<ul class="nav navbar-nav navbar-right">
+  <li *ngIf="!(af.auth | async)"><a href="#products" class="waves-effect waves-light" [routerLink]="['Signin']">  <i class="fa fa-sign-in"></i> SignIn</a></li>
+  <li  *ngIf="af.auth | async"> {{ (af.auth | async).github.username  }}
+    <a href="" class="waves-effect waves-light" (click)="af.auth.logout()">
+      <i class="fa fa-sign-out"></i> SignOut</a>
+  </li>
+</ul>
+
